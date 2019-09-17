@@ -1,4 +1,4 @@
-{% set version = "0.0.5" %}
+{% set version = "0.0.6" %}
 
 package:
   name: xskillscore
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
-  sha256: 1e6bfab7994f77307fbf3926a49ee5639908596cb52c8eab6d76b44cdd8eea07
+  sha256: 3958d853681f703c0e5a473754d558e6c0380251bb00970d025489b7eef3e690
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - scipy
     - xarray
     - numba
+    - bottleneck
 
 test:
   imports:
