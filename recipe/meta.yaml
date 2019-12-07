@@ -1,4 +1,4 @@
-{% set version = "0.0.8" %}
+{% set version = "0.0.9" %}
 
 package:
   name: xskillscore
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
-  sha256: 7a82da206c83efed3552f50614c7a036cee7978e683364abfa29b32bc3548060
+  sha256: a04ff434a2d2b76465aabdd90fef36dd35764b2abfb66f8fec6c5c9dd250612e
 
 build:
   number: 0
