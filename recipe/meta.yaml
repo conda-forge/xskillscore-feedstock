@@ -1,4 +1,4 @@
-{% set version = "0.0.16" %}
+{% set version = "0.0.17" %}
 
 package:
   name: xskillscore
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
-  sha256: aef1fff0af01bb2df2653510d090fa300fa827a9833b251374121582b0b12608
+  sha256: 636b67955b0ac6f9e5aafb1a19f2ae5fd5ccb7a5568bb53df09d80bd2bfbd88e
 
 build:
   number: 0
@@ -17,15 +17,20 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools_scm
+    - setuptools_scm_git_archive
   run:
     - python >=3.6
+    - bottleneck
+    - cftime
     - dask
+    - numba
+    - numpy
     - properscoring
     - scikit-learn
     - scipy
     - xarray
-    - numba
-    - bottleneck
+    - xhistogram
 
 test:
   imports:
@@ -37,7 +42,9 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE.txt
-  summary: xskillscore
+  summary: Metrics for verifying forecasts 
+  doc_url: http://xskillscore.readthedocs.io
+  dev_url: https://github.com/raybellwaves/xskillscore
 
 extra:
   recipe-maintainers:
