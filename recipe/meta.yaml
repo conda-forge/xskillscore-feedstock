@@ -17,6 +17,8 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools_scm
+    - setuptools_scm_git_archive
   run:
     - python >=3.6
     - bottleneck
@@ -40,7 +42,9 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE.txt
-  summary: xskillscore
+  summary: Metrics for verifying forecasts 
+  doc_url: http://xskillscore.readthedocs.io
+  dev_url: https://github.com/raybellwaves/xskillscore
 
 extra:
   recipe-maintainers:
