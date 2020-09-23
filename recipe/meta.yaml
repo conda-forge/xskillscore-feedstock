@@ -1,4 +1,4 @@
-{% set version = "0.0.16" %}
+{% set version = "0.0.18" %}
 
 package:
   name: xskillscore
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
-  sha256: aef1fff0af01bb2df2653510d090fa300fa827a9833b251374121582b0b12608
+  sha256: 40e9757a3f03b9366db7983cd398721a19dd03f3c5e937b8a0f71d30f4088c70
 
 build:
   number: 0
@@ -19,13 +19,16 @@ requirements:
     - pip
   run:
     - python >=3.6
+    - bottleneck
+    - cftime
     - dask
+    - numba
+    - numpy
     - properscoring
     - scikit-learn
     - scipy
-    - xarray
-    - numba
-    - bottleneck
+    - xarray >=0.16.1
+    - xhistogram
 
 test:
   imports:
