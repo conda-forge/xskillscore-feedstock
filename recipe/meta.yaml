@@ -9,7 +9,7 @@ source:
   sha256: aef1fff0af01bb2df2653510d090fa300fa827a9833b251374121582b0b12608
 
 build:
-  number: 0
+  number: 1 
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -33,7 +33,7 @@ test:
     - xskillscore.core
 
 about:
-  home: https://github.com/raybellwaves/xskillscore
+  home: https://github.com/xarray-contrib/xskillscore
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE.txt
