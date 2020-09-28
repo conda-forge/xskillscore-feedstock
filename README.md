@@ -1,7 +1,7 @@
 About xskillscore
 =================
 
-Home: https://github.com/raybellwaves/xskillscore
+Home: https://github.com/xarray-contrib/xskillscore
 
 Package license: Apache-2.0
 
