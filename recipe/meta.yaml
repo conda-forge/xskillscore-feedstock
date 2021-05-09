@@ -1,4 +1,4 @@
-{% set version = "0.0.19" %}
+{% set version = "0.0.20" %}
 
 package:
   name: xskillscore
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
-  sha256: 6291f373f5686f30a87c932cec0f0bf4e6d6cb4ab412e3d943d8407a36aa5d4f
+  sha256: 402eb1502b3c2b8837b74ce1e60b59596f95856fed489ba673cec267fca55d4b
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - scikit-learn
     - scipy
     - xarray >=0.16.1
-    - xhistogram >=0.1.2
+    - xhistogram ==0.1.2
 
 test:
   imports:
@@ -44,7 +44,7 @@ about:
   license_file: LICENSE.txt
   summary: Metrics for verifying forecasts 
   doc_url: http://xskillscore.readthedocs.io
-  dev_url: https://github.com/raybellwaves/xskillscore
+  dev_url: https://github.com/xarray-contrib/xskillscore
 
 extra:
   recipe-maintainers:
