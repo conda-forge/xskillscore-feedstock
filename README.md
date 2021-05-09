@@ -9,7 +9,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xskillscore-fee
 
 Summary: Metrics for verifying forecasts
 
-Development: https://github.com/raybellwaves/xskillscore
+Development: https://github.com/xarray-contrib/xskillscore
 
 Documentation: http://xskillscore.readthedocs.io
 
@@ -40,6 +40,7 @@ Installing `xskillscore` from the `conda-forge` channel can be achieved by addin
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `xskillscore` can be installed with:
