@@ -9,7 +9,7 @@ source:
   sha256: 402eb1502b3c2b8837b74ce1e60b59596f95856fed489ba673cec267fca55d4b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -23,7 +23,7 @@ requirements:
     - python >=3.7
     - bottleneck
     - cftime
-    - dask <=2021.02.0
+    - dask
     - numba >=0.52
     - numpy
     - properscoring
