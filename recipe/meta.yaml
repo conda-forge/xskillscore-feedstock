@@ -1,4 +1,4 @@
-{% set version = "0.0.24" %}
+{% set version = "0.0.26" %}
 
 package:
   name: xskillscore
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
-  sha256: ce3306c60626eafea722a1522016e272ca516ce6f2447c75f92c52888939f8c2
+  sha256: 780a424c1ab3eedf526a45ba8e6cf6dca61b17339252115a4e25ea8c5833ada5
 
 build:
   number: 0
@@ -29,6 +29,7 @@ requirements:
     - properscoring
     - scikit-learn
     - scipy
+    - statsmodels
     - xarray >=0.16.1
     - xhistogram >=0.3.0
 
