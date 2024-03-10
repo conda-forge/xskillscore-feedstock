@@ -29,6 +29,7 @@ requirements:
     - properscoring
     - scikit-learn
     - scipy
+    - statsmodels
     - xarray >=0.16.1
     - xhistogram >=0.3.0
 
