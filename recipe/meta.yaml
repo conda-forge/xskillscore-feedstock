@@ -5,22 +5,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
   sha256: 780a424c1ab3eedf526a45ba8e6cf6dca61b17339252115a4e25ea8c5833ada5
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
     - setuptools_scm
     - setuptools_scm_git_archive
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - bottleneck
     - cftime
     - dask
@@ -34,6 +35,8 @@ requirements:
     - xhistogram >=0.3.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - xskillscore
     - xskillscore.core
