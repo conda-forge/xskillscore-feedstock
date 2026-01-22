@@ -9,7 +9,7 @@ source:
   sha256: e003bba66d2d244524f5b9fa9b152a71b09646d25beda42622b0eb7fd84c05c5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -17,36 +17,47 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
-    - setuptools_scm
-    - setuptools_scm_git_archive
+    - setuptools >=64.0
+    - setuptools_scm >=8.0
   run:
     - python >={{ python_min }}
-    - bottleneck
-    - cftime
-    - dask
-    - numba >=0.52
-    - numpy
+    - dask >=2023.4.0
+    - numpy >=1.24,<2.4
     - properscoring
-    - scikit-learn
-    - scipy
+    - scipy >=1.10
     - statsmodels
-    - xarray >=0.16.1
-    - xhistogram >=0.3.0
+    - xarray >=2023.4.0
+    - xhistogram >=0.3.2
 
 test:
   requires:
     - python {{ python_min }}
+    - bottleneck
+    - cftime 
+    - matplotlib-base
+    - numba >=0.57.0
+    - packaging
+    - pytest
+    - pytest-cov
+    - pytest-timeout
+    - pytest-xdist
+    - scikit-learn
   imports:
     - xskillscore
     - xskillscore.core
-
+  test:
+    - pytest -n auto --cov=xskillscore --cov-report=xml --verbose
+    
 about:
   home: https://github.com/xarray-contrib/xskillscore
   license: Apache-2.0
-  license_family: APACHE
+  license_family: Apache
   license_file: LICENSE.txt
   summary: Metrics for verifying forecasts
+  description: |
+    xskillscore is an open source project and Python package that provides
+    verification metrics of deterministic (and probabilistic from properscoring)
+    forecasts with xarray.
   doc_url: http://xskillscore.readthedocs.io
   dev_url: https://github.com/xarray-contrib/xskillscore
 
