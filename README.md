@@ -13,6 +13,11 @@ Development: https://github.com/xarray-contrib/xskillscore
 
 Documentation: http://xskillscore.readthedocs.io
 
+xskillscore is an open source project and Python package that provides
+verification metrics of deterministic (and probabilistic from properscoring)
+forecasts with xarray.
+
+
 Current build status
 ====================
 
@@ -147,6 +152,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Zeitsperre](https://github.com/Zeitsperre/)
 * [@aaronspring](https://github.com/aaronspring/)
 * [@bradyrx](https://github.com/bradyrx/)
 * [@ocefpaf](https://github.com/ocefpaf/)
