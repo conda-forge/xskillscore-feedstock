@@ -46,6 +46,7 @@ test:
     - xskillscore
     - xskillscore.core
   source_files:
+    - conftest.py
     - xskillscore/tests
   commands:
     - pytest -n auto --cov=xskillscore --cov-report=xml --verbose xskillscore/tests
