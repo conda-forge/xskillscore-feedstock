@@ -1,5 +1,4 @@
 {% set version = "0.0.28" %}
-{% set python_min = "3.9" %}
 
 package:
   name: xskillscore
@@ -46,8 +45,10 @@ test:
   imports:
     - xskillscore
     - xskillscore.core
+  source_files:
+    - xskillscore/tests
   commands:
-    - pytest -n auto --cov=xskillscore --cov-report=xml --verbose
+    - pytest -n auto --cov=xskillscore --cov-report=xml --verbose xskillscore/tests
     
 about:
   home: https://github.com/xarray-contrib/xskillscore
