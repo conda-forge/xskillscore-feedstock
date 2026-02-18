@@ -1,4 +1,4 @@
-{% set version = "0.0.28" %}
+{% set version = "0.0.29" %}
 
 package:
   name: xskillscore
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/x/xskillscore/xskillscore-{{ version }}.tar.gz
-  sha256: e003bba66d2d244524f5b9fa9b152a71b09646d25beda42622b0eb7fd84c05c5
+  sha256: 34375e86ea5e2ac710e52b8eb8e77c7acb5b2782aa6c67e863c71e4ae202dd74
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -33,7 +33,7 @@ test:
   requires:
     - python {{ python_min }}
     - bottleneck
-    - cftime 
+    - cftime
     - matplotlib-base
     - numba >=0.57.0
     - packaging
@@ -50,7 +50,7 @@ test:
     - xskillscore/tests
   commands:
     - pytest -n auto --cov=xskillscore --cov-report=xml --verbose xskillscore/tests
-    
+
 about:
   home: https://github.com/xarray-contrib/xskillscore
   license: Apache-2.0
